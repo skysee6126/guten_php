@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     <?php include('views/header.inc.php'); ?>
@@ -15,7 +16,7 @@
             </div>
             <div class="form-password">
                 <label>Password：</label>
-                <input name="password" type="text" placeholder="password">
+                <input name="password" type="password" placeholder="password">
             </div>
         
             <button type="submit" class="submit">ログイン</button>
@@ -31,15 +32,15 @@
     <div class="form">
             <div class="form-email ">
                 <label>Email：</label>
-                <input name="email" type="text" placeholder="メールアドレスを記入">
+                <input name="email" type="text" placeholder="メールアドレスを記入" required>
             </div>
             <div class="form-password">
                 <label>Password：</label>
-                <input name="password" type="text" placeholder="パスワードを記入">
+                <input name="password" type="text" placeholder="パスワードを記入" minlength='6' required>
             </div>
             <div class="form-cpassword">
                 <label>Confirm Password：</label>
-                <input name="passwordCheck" type="text" placeholder="パスワードを記入">
+                <input name="passwordCheck" type="text" placeholder="パスワードを記入" minlength='6'  required>
             </div>
             <button type="submit" class="submit">会員登録</button>
         </div>
@@ -63,7 +64,7 @@
                 
             signupForm.submit();
             }else{
-                alert("パスワードが一致しません。もう一度やり直。");
+                alert("パスワードが一致しません。もう一度、確認してください。");
             }
         });
     </script>

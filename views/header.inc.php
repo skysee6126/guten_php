@@ -1,4 +1,4 @@
-
+<!-- <?php session_start(); ?> -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,16 +15,15 @@
     <li><a href="menu.php">Menu Recommendation</a></li>
     <li><a href="mypage.php">My page</a></li>
     <li><?php
-        if (isset($_SESSION['userId'])) {
-        ?>
-            <li class="nav-item d-flex align-items-center" onclick="logout()">logout</li>
-        <?php
-        } else {
-        ?>
-
+        if (!isset($_SESSION["chk_ssid"]) ||
+        $_SESSION["chk_ssid"] != session_id()
+        ) { ?>
             <li class="nav-item">
-                <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" href="login.php">Login</a>
             </li>
+        <?php
+        } else { ?>
+            <li class="nav-item d-flex align-items-center" onclick="logout()">logout</li>
 
         <?php
         }

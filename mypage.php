@@ -53,11 +53,11 @@ $_SESSION["chk_ssid"] != session_id()
     <div class="list__form">
 	<form action="mypage.php" method="post">
 		<p><label>項目</label>
-		<input type="text" name="item"><p>
+		<input type="text" name="item" required><p>
 		<p><label>量</label>
-		<input type="number" name="quantity"></p>
+		<input type="number" name="quantity" required></p>
         <p><label>賞味期限</label>
-        <input type="date" value="yyyy-MM-dd" name="expiration"></p>
+        <input type="date" value="yyyy-MM-dd" name="expiration" required></p>
 		<button type="submit" class="submit">送信</button>
 	</form>
     </div>
