@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang='ja'>
 <?php 
-    //Check to the inserted keyword
-    // if(!isset($_POST["keyword"]) || $_POST["keyword"]==""
-    // ){
-    // exit('ParamError');
-    // }
-    include('views/header.inc.php'); 
-    // $keyword = $_POST["keyword"];
-    $keywords = $_POST["keywords"];
-    $keyword = implode("%E3%80%80", $keywords);
-    
 
-    function h ($value) {
-        return htmlspecialchars($value, ENT_QUOTES);
-}?>
-<body>
-<div class="result">
-<?php
+// $keyword = $_REQUEST["keyword"];
+// $keyword = implode(',',$keyword);
+// echo $keyword;
+
+$keywords = $_POST["keywords"];
+$keyword = implode("%E3%80%80", $keywords);
+// echo $keyword;
 
 //Start to scrape from the URL
 ini_set("allow_url_fopen", 1);
@@ -41,7 +30,3 @@ echo
 }
 
 ?>
-</div>
-    <?php include('views/footer.inc.php'); ?>
-    </body>
-</html>
