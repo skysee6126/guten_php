@@ -7,9 +7,7 @@
     // exit('ParamError');
     // }
     include('views/header.inc.php'); 
-    // $keyword = $_POST["keyword"];
-    $keywords = $_POST["keywords"];
-    $keyword = implode("%E3%80%80", $keywords);
+    $keyword = $_POST["keyword"];
     
 
     function h ($value) {

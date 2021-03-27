@@ -90,6 +90,12 @@ $_SESSION["chk_ssid"] != session_id()
                     <td><?= $row["expiration"] ?></td>
                     <td class= td_btn><a class="edit" href="edit.php?id=<?php echo $row['id']; ?>"><i class="far fa-edit"></i></a></td>
                     <td class= td_btn>
+                        <form action="menu_result.php" method="post">
+                            <input type="hidden" name="keyword" value=<?= $row["item"] ?>>
+                            <button type="submit">recipe</button>
+                        </form>
+                    </td>
+                    <td class= td_btn>
                         <form action="mypage.php" method="post">
                             <input type="hidden" name="delete_id" value=<?= $row["id"] ?>>
                             <button type="submit"><i class="far fa-trash-alt"></i></button>
