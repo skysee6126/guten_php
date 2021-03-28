@@ -92,7 +92,7 @@ $_SESSION["chk_ssid"] != session_id()
                     <td class= td_btn>
                         <form action="menu_result.php" method="post">
                             <input type="hidden" name="keyword" value=<?= $row["item"] ?>>
-                            <button type="submit">recipe</button>
+                            <button type="submit"><i class="fas fa-search"></i></button>
                         </form>
                     </td>
                     <td class= td_btn>

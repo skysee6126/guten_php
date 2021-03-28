@@ -7,7 +7,7 @@
         <h2>Login</h2>
         <p>会員専用ページにアクセスするためにはログインをしてください。</p>
     </div>
-    <div class="content">
+    <div class="login__page">
         <form action="loginProcess.php" method="post"> 
         <div class="form">
             <div class="form-email ">

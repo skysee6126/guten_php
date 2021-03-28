@@ -73,7 +73,7 @@ $_SESSION["chk_ssid"] != session_id()
                     <td class= td_btn>
                         <form action="bookmark.php" method="post">
                             <input type="hidden" name="delete_id" value=<?= $row["id"] ?>>
-                            <button type="submit">Delete</i></button>
+                            <button type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>
