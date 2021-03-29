@@ -18,6 +18,10 @@ body {
     text-align: center;
 }
 
+.content {
+    margin: 0 1rem;
+}
+
 footer {
     display: flex;
     align-items: flex-end;
@@ -39,11 +43,13 @@ input[type=submit]:hover, .submit:hover{
 
 .tittle {
     margin: 3rem auto;
+    padding: 0 2rem;
 }
 
 .tittle p {
     color: var(--text-color);
 }
+
 
 /* header.inc part */
 
@@ -57,6 +63,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1;
+    font-family: 'Kiwi Maru', serif;
 }
 
 li {
@@ -95,6 +102,10 @@ li {
     display: inline;
 }
 
+.nav__left {
+    padding-top: 15px;
+}
+
 .nav a:hover {
     color: black;
 }
@@ -103,11 +114,67 @@ li {
     color: var(--point-color);
 }
 
+.nav__bar {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+    header {
+        min-height: 7%;
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .logo {
+        display: flex;
+        justify-content: left;
+    }
+
+    
+    .nav, .nav__left {
+        display: none;
+    }
+
+    .nav__bar {
+        display: flex;
+        margin-left: 90%;
+        position: fixed;
+        text-decoration: none;
+        z-index: 3;
+        margin-top: -5vh;
+        color: black;
+    }
+
+    .nav.active, .nav__left a.active {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav__left.active {
+        display: flex;
+        margin: 0 auto 20px;
+        padding-left: 0;
+    }
+
+    .tittle-box {
+        height: 50vh;
+        margin: -2rem auto;
+    }
+}
+
+
 /* content.tpl part */
 
 .tittle-box { 
     width: 100%; 
-    height: 600px; 
+    height: 60vh; 
     overflow: hidden;
     margin: 0px auto; 
     position: relative; 
@@ -123,10 +190,10 @@ video {
 }
 
 .tittle-text p { 
-    margin-top: -24px;
-    text-align: center; 
-    font-size: 48px; 
-    color: #ffffff; 
+    margin-top: -5vh;
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
 }
 
 .explanation {
@@ -150,7 +217,14 @@ video {
     justify-content: center;
     align-content: center;
     height: 20vh;
-    width: 40vw;
+    width: 90vh;
+    
+}
+
+.case__img {
+    max-width: 100%;
+    height: auto;
+
 }
 
 .case p {
@@ -161,16 +235,37 @@ video {
     border-radius: 0.5rem;
 }
 
+.suggestion {
+    padding-top: 3rem;
+}
+
 .bottom {
     height: 20rem;
-    margin: 5vh;
+    margin: 5rem;
     display: grid;
+}
+
+
+@media screen and (max-width: 768px) {
+    .case {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        height: auto;
+        width: auto;
+        align-content: normal;
+
+    }
+
+    .second {
+        flex-direction: column-reverse;
+    }
 }
 
 
 /* about part */
 .text {
-    width: 50vw;
+    max-width: 50vw;
     margin: 0 auto;
     padding-bottom: 5%;
 }
@@ -182,19 +277,22 @@ video {
 .image {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    width: 70vw;
+    margin: 2rem auto;
 
 }
 
 .text_business {
     text-align: left;
     padding: 0 5%;
-    width: 60vh;
-    margin-bottom: 15%;
+    max-width: 55vh;
+
 }
 
 .partner {
-    margin: 5%;
+    margin: 10rem auto;
 }
 
 /* menu part */
@@ -208,9 +306,6 @@ video {
     justify-content: center;
 }
 
-.recipe {
-    margin: 1rem;
-}
 .recipe__img{
     height: 360px;
     width: 260px;
@@ -223,6 +318,7 @@ video {
 
 .recom_search {
     display: flex;
+    flex-wrap: wrap;
     border: grey solid 1px;
     max-width: 80%;
     justify-content: center;
@@ -262,13 +358,15 @@ button {
 .list__form {
     display: flex;
     justify-content: center;
-    background-color: beige;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    width: 40%;
-    border-radius: 1rem;
     margin: 0 auto;
 }
+
+.list__form form {
+    background-color: beige;
+    padding: 20px 30px 10px;
+    border-radius: 1rem;
+}
+
 
 
 .list {
@@ -279,11 +377,15 @@ button {
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
-    border: beige solid 3px;
     padding-top: 20px;
-    width: 40%;
-    border-radius: 1rem;
     margin: 0 auto 3rem auto;
+}
+
+table {
+    border: beige solid 3px;
+    border-radius: 1rem;
+    margin: 0 2rem;
+
 }
 
 th {

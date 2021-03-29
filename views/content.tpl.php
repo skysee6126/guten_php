@@ -21,7 +21,7 @@
         </div>
         <div class="cases">
             <div class="case">
-                <img src= "img/man.jpg" alt="man">
+                <img class="case__img" src= "img/man.jpg" alt="man">
                 <p>　コロナで在宅勤務が始まってから家にいる時間が増えました。
                 普段は会社で適当に済ませてたが、家にいてからは何を食べるかを意識することになりました。
                 だけど、毎回何を食べるか悩むのはもううんざりです。
@@ -29,13 +29,13 @@
 
                 </p>
             </div>
-            <div class="case">
+            <div class="case second">
                 <p>　今日も残業で疲れてしまいました。
                 お腹はすいたが、何を食べるか悩む力さえありません。
                 毎日同じレパートリーで食事をするのもあんまりです。
                 パッと誰かが決めてくれれば楽でしょうね。
                 </p>
-                <img src= "img/woman.jpg" alt="woman">
+                <img class="case__img" src= "img/woman.jpg" alt="woman">
             </div>
         </div>
         <div class="bottom">

@@ -3,13 +3,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css?ver=11"> 
+    <link rel="stylesheet" type="text/css" href="style.css?ver=20"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <header>
 <div class="logo">
     <a href="index.php"><img src="img/logo.png" alt="logo"></a>
-    <h3><a href="index.php"> Guten Apetit!</a></h3>
+    <h3><a href="index.php">Guten Apetit!</a></h3>
 </div>
 <ul class="nav">
     <li><a href="about.php">About</a></li>
@@ -21,12 +24,12 @@
         if (!isset($_SESSION["chk_ssid"]) ||
         $_SESSION["chk_ssid"] != session_id()
         ) { ?>
-            <li class="nav-item">
+            <div class="nav-item">
             <a class="nav-link" href="login.php">Login・Sign up</a>
-            </li>
+        </div>
         <?php
         } else { ?>
-            <li class="nav-item d-flex align-items-center" onclick="logout()">logout</li>
+            <div class="nav-item d-flex align-items-center" onclick="logout()" style="cursor: pointer;" >logout</li>
 
         <?php
         }
@@ -39,6 +42,22 @@
             }
 
         }
-    </script></li>
+
+</script></div>
 </div>
 </header>
+<a href="#" class="nav__bar">
+    <i class="fas fa-bars"></i>
+</a>
+<script>    
+const hamburger = document.querySelector('.nav__bar');
+const logo =  document.querySelector('.logo');
+const nav =  document.querySelector('.nav');
+const nav__left =  document.querySelector('.nav__left');
+
+hamburger.addEventListener('click', () => {
+    logo.classList.toggle('active');
+    nav.classList.toggle('active');
+    nav__left.classList.toggle('active');
+});
+</script>
