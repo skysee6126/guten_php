@@ -8,10 +8,10 @@
 
 ## Point
 |Feature|Description|
-|--|--|
-|: Web scraping :|Simple_html_domで楽天レシピのスクレイピング|
-|: Membership :|MySQLから会員登録や会員向けのCRUD|
-|: Responsive Web :|JS・CSSを使って画面の大きさによってフレームが変化|
+|:--:|--|
+|Web scraping|Simple_html_domで楽天レシピのスクレイピング|
+|Membership|MySQLから会員登録や会員向けのCRUD|
+|Responsive Web|JS・CSSを使って画面の大きさによってフレームが変化|
 
 ___
 
