@@ -12,7 +12,7 @@
 <header>
 <div class="logo">
     <a href="index.php"><img src="img/logo.png" alt="logo"></a>
-    <h3><a href="index.php">Guten Apetit!</a></h3>
+    <h3><a href="index.php">Guten Appetit!</a></h3>
 </div>
 <ul class="nav">
     <li><a href="about.php">About</a></li>

@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang='ja'>
 <?php 
-    //Check to the inserted keyword
-    // if(!isset($_POST["keyword"]) || $_POST["keyword"]==""
-    // ){
-    // exit('ParamError');
-    // }
     include('views/header.inc.php'); 
     $keyword = $_POST["keyword"];
     
